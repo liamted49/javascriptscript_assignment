@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filter Names Example</title>
+</head>
+<body>
+  <h2>Filtered Names Starting with "B"</h2>
+  <div id="result"></div>
+
+  <script>
+    // Original array of names
+    const people = [
+      "Alice Anderson",
+      "Aaron Adams",
+      "Bella Brown",
+      "Brian Black",
+      "Cathy Carter",
+      "Charles Cooper",
+      "Diana Davis",
+      "Daniel Drake",
+      "Ella Evans",
+      "Ethan Edwards",
+      "Fiona Fisher",
+      "Frank Foster",
+      "Grace Green",
+      "Gavin Gray",
+      "Hannah Harris",
+      "Henry Hill",
+      "Isabella Ingram",
+      "Ian Irving",
+      "Jack Johnson",
+      "Julia James"
+    ];
+
+    // Choose the first letter to filter by
+    const firstLetter = "B";
+
+    // Use filter() to get names starting with the chosen letter
+    const result = people.filter((name) => name.charAt(0) === firstLetter);
+
+    // Display the result in console
+    console.log(result);
+
+    // Optional: Display the result on the web page
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = result.join("<br>");
+  </script>
+</body>
+</html>
